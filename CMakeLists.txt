@@ -3,4 +3,4 @@ project(quadratic_equation C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(quadratic_equation main.c)
+add_executable(quadratic_equation quadratic_equation.c tests.c main.c tests.h quadratic_equation.h)
