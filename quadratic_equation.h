@@ -8,14 +8,24 @@
 static const char FAILURE_MESSAGE[] = "failed to read!\n";
 static const char EMPTY_SET_ANSWER[] = "Answer: empty set\n";
 static const char R_ANSWER[] = "Answer: R\n";
-static const double EPS = 0.00001;
+static const char DISC_ERROR[] = "Discriminant is NaN. Failed to solve.\n";
+static const double EPS = 0.000001;
+
+/**
+ * Discriminant calculator
+ * @param a coefficient of x^2
+ * @param b coefficient of x
+ * @param c constant coefficient
+ * @return double returns discriminant.
+ */
+double getDiscriminant(double a, double b, double c);
 
 /**
  * This method is used to check if double-value is close to zero.
  * @param x double-value
  * @return int returns 1 if true, 0 if false.
  */
-int isNull(double x);
+int isCloseToZero(double x);
 
 /**
  * This method is used to get coefficients from user.
