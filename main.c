@@ -1,12 +1,11 @@
 #include "tests.h"
 #include "quadratic_equation.h"
 #include <stdio.h>
-#include <assert.h>
 
 int main()
 {
     runAllTests();
-    double a, b, c;
+    double a = 0, b = 0, c = 0;
     getCoefficient("enter a:", &a);
     getCoefficient("enter b:", &b);
     getCoefficient("enter c:", &c);
@@ -15,3 +14,4 @@ int main()
     printAnswer(ans);
     return 0;
 }
+
