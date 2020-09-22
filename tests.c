@@ -5,21 +5,21 @@
 
 void runAllTests()
 {
-    isNullTest();
+    isCloseToZeroTest();
     solveLinearEquationTest();
     solveQuadraticEquationTest();
     solveTest();
     printf("All tests passed!\n");
 }
 
-void isNullTest()
+void isCloseToZeroTest()
 {
-    assert(!isNull(3.3));
-    assert(!isNull(-4.8));
-    assert(isNull(0));
-    assert(isNull(0.000000008));
-    assert(!isNull(0.00001));
-    assert(isNull(0.0));
+    assert(!isCloseToZero(3.3));
+    assert(!isCloseToZero(-4.8));
+    assert(isCloseToZero(0));
+    assert(isCloseToZero(0.000000008));
+    assert(!isCloseToZero(0.00001));
+    assert(isCloseToZero(0.0));
 }
 
 void solveLinearEquationTest()
@@ -41,13 +41,13 @@ void solveQuadraticEquationTest()
     assert(solveQuadraticEquation(1, -2, 1)[0] == 1);
     assert(solveQuadraticEquation(1, -2, 1)[1] == 1);
     assert(solveQuadraticEquation(1, -6.6, 10.89)[0] == 1);
-    assert(isNull(solveQuadraticEquation(1, -6.6, 10.89)[1] - 3.3));
+    assert(isCloseToZero(solveQuadraticEquation(1, -6.6, 10.89)[1] - 3.3));
     assert(solveQuadraticEquation(1, 1, -12)[0] == 2);
     assert(solveQuadraticEquation(1, 1, -12)[1] == 3);
     assert(solveQuadraticEquation(1, 1, -12)[2] == -4);
     assert(solveQuadraticEquation(1, -5.5, 4.84)[0] == 2);
-    assert(isNull(solveQuadraticEquation(1, -5.5, 4.84)[1] - 4.4));
-    assert(isNull(solveQuadraticEquation(1, -5.5, 4.84)[2] - 1.1));
+    assert(isCloseToZero(solveQuadraticEquation(1, -5.5, 4.84)[1] - 4.4));
+    assert(isCloseToZero(solveQuadraticEquation(1, -5.5, 4.84)[2] - 1.1));
     assert(solveQuadraticEquation(1, 3, 100)[0] == 0);
 }
 
@@ -61,5 +61,3 @@ void solveTest()
     assert(solve(1, 1, -12)[1] == 3);
     assert(solve(1, 1, -12)[2] == -4);
 }
-
-
