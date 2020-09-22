@@ -12,9 +12,9 @@
 void runAllTests();
 
 /**
- * This method is used to check isNull() method.
+ * This method is used to check isCloseToZero() method.
  */
-void isNullTest();
+static void isCloseToZeroTest();
 
 /**
  * This method is used to check solveLinearEquation() method.
